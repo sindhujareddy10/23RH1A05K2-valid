@@ -1,0 +1,18 @@
+<!-- adding two numbers using button Click -->
+<html>
+    <body>
+        <input type="text" id="num1" placeholder="Enter number 1"><br/><br/>
+                <input type="text" id="num2" placeholder="Enter number 2"><br/><br/>
+        <p id="op">Result will be here</p>
+        <button onclick="add()">add</button>
+        <script>
+            function add()
+            {
+                const num1=document.getElementById("num1").value;
+                const num2=document.getElementById("num2").value;
+                const op=parseInt(num1)+parseInt(num2);
+                document.getElementById("op").innerHTML=op;
+            }
+        </script>
+    </body>
+</html>

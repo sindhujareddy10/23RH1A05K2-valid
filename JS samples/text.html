@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <input type="text" id="name" placeholder="enter your name">
+        <p id="op"> </p>
+        <script>
+            let name=document.getElementById("name");
+            name.addEventListener("input",function(){
+                let str=name.value;
+                document.getElementById("op").innerHTML=str;
+            })
+        </script>
+    </body>
+</html>

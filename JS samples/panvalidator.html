@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <input type="text" id="pan" placeholder="Enter pan number(ABCDE5F)">
+        <p id="message"></p>
+        <script>
+            let pan=document.getElementById("pan");
+            pan.addEventListener("input",function(){
+                let str=pan.value.toUpperCase();
+                const panregex=/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+                if(panregex.test(str))
+            {
+                document.getElementById("message").innerHTML="Valid pan";
+                document.getElementById("message").style="color:green";
+            }
+            else{
+                document.getElementById("message").innerHTML="Invalid pan";
+                document.getElementById("message").style="color:red";
+            }
+            })
+        </script>
+    </body>
+</html>

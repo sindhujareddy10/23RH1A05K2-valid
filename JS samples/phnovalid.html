@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <input type="text" id="phno" placeholder="Enter mobile number">
+        <p id="message"></p>
+        <script>
+            let phno=document.getElementById("phno");
+            phno.addEventListener("input",function(){
+                let str=phno.value;
+                const phnoregex=/^[0-9]{10}$/;
+                if(phnoregex.test(str)){
+                    document.getElementById("message").innerHTML="Valid";
+                    document.getElementById("message").style="color:blue";
+                }else{
+                    document.getElementById("message").innerHTML="Invalid";
+                    document.getElementById("message").style="color:red";
+                }
+            })
+        </script>
+    </body>
+</html>
